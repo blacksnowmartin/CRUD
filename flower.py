@@ -5,18 +5,19 @@ import time
 # --- Configuration ---
 turtle.bgcolor("black")
 turtle.speed(0)
-turtle.pencolor("white")
+turtle.pencolor("cyan")
 turtle.hideturtle()
 turtle.tracer(0, 0)  # turn off automatic updates for smooth animation
 
 base_radius = 6      # starting circle radius
-num_layers = 4       # how many hex layers to draw (including center)
+num_layers = 17      # how many hex layers to draw (including center)
 growth_factor = 1.12 # exponential growth per frame
 max_radius = 120     # stop growing when circle radius exceeds this
 frame_delay = 0.03   # seconds between frames
 
 def draw_flower(r, layers):
     turtle.clear()
+    turtle.pensize(3)  # make lines bold
     # center circle
     turtle.penup()
     turtle.goto(0, -r)
